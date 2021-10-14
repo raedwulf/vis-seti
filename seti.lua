@@ -2,7 +2,7 @@
 local lexers = vis.lexers
 
 local colors = {
-	['base03'] = '#000000', -- '#002b36',
+	['base03'] = '#002b36',
 	['base02'] = '#073642',
 	['base01'] = '#41535b',
 	['base00'] = '#757777',
@@ -22,8 +22,8 @@ local colors = {
 
 lexers.colors = colors
 -- dark
-local fg = ',fore:'..colors.base0..','
-local bg = ',back:'..colors.base03..','
+local fg = ',fore:white,'
+local bg = ',back:default,'
 -- light
 -- local fg = ',fore:'..colors.base03..','
 -- local bg = ',back:'..colors.base3..','
@@ -47,7 +47,7 @@ lexers.STYLE_TAG = 'fore:'..colors.red
 lexers.STYLE_TYPE = 'fore:'..colors.yellow
 lexers.STYLE_VARIABLE = 'fore:'..colors.blue
 lexers.STYLE_WHITESPACE = ''
-lexers.STYLE_EMBEDDED = 'back:blue'
+lexers.STYLE_EMBEDDED = 'back:'..colors.base03
 lexers.STYLE_IDENTIFIER = fg
 
 lexers.STYLE_LINENUMBER = 'fore:'..colors.base00
